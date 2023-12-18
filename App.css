@@ -13,13 +13,9 @@
     color: rgb(255, 238, 250); 
   }
   body {
-    /* Set background image */
     background-image: url('./3d-rendering-abstract-black-white-waves.jpg');
-    /* Ensure the background image covers the entire viewport */
     background-size: cover;
-    /* Center the background image */
     background-position: center;
-    /* Optional: Add a background color in case the image doesn't load */
     background-color: #f2f2f2;
   }
   
