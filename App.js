@@ -11,8 +11,6 @@ function App() {
   const [newTask, setNewTask] = useState('');
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
-
-  // Save tasks to local storage whenever tasks change
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
     if (storedTasks) {
