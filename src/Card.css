@@ -1,0 +1,44 @@
+.card {
+    border: 1px solid #e5323200;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px hsl(302, 50%, 71%);
+    text-shadow: -1.2px 2px .5px hsl(302, 50%, 71%);;
+    max-width: 300px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+  }
+
+  .card .taskName{
+    color: rgb(255, 238, 250); 
+}
+
+.card .inputTask {
+    border-radius: 10px;
+    cursor: pointer;
+    color: hsl(302, 50%, 71%);
+    border: 2px solid hsl(302, 50%, 71%);
+    margin-bottom: 30px;
+    width: 150px;
+    
+    background-color: rgba(0, 255, 255, 0);
+  }
+  .card .addTaskButton{
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 2px solid hsl(302, 50%, 71%);
+    background-color: rgba(255, 192, 203, 0);
+    cursor: pointer;
+    color: white;
+  }
+  .card .dateSelector{
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 2px solid hsl(302, 50%, 71%);
+    background-color: rgba(255, 192, 203, 0);
+    cursor: pointer;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
