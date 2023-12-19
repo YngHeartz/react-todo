@@ -1,46 +1,54 @@
 .card {
-    border: 1px solid #e5323200;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px hsl(302, 50%, 71%);
-    text-shadow: -1.2px 2px .5px hsl(302, 50%, 71%);;
-    max-width: 300px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 400px;
-    height: 300px;
-    padding-top: 20px;
-    margin-top: 20px;
-  }
+  border: 1px solid #e5323200;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px hsl(302, 50%, 71%);
+  text-shadow: -1.2px 2px .5px hsl(302, 50%, 71%);
+  max-width: 1200px; /* Doubled width */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 500px; /* Doubled width */
+  height: 400px; /* Doubled height */
+  padding-top: 40px; /* Adjusted padding for visual balance */
+  margin-top: 40px; /* Adjusted margin for visual balance */
+  font-size: 50px; /* Increased font size for the card content */
+}
 
-  .card .taskName{
-    color: rgb(255, 238, 250); 
+/* Adjusted font size for child elements */
+.card .taskName {
+  font-size: 40px;
+  color: rgb(255, 238, 250); 
 }
 
 .card .inputTask {
-    border-radius: 10px;
-    cursor: pointer;
-    color: hsl(302, 50%, 71%);
-    border: 2px solid hsl(302, 50%, 71%);
-    margin-bottom: 30px;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.568);
-  }
-  .card .addTaskButton{
-    margin-left: 15px;
-    border-radius: 10px;
-    border: 2px solid hsl(302, 50%, 71%);
-    background-color: rgba(255, 192, 203, 0);
-    cursor: pointer;
-    color: white;
-  }
-  .card .dateSelector{
-    margin-left: 15px;
-    border-radius: 10px;
-    border: 2px solid hsl(302, 50%, 71%);
-    background-color: rgba(255, 192, 203, 0);
-    cursor: pointer;
-    margin-bottom: 30px;
-    color: white;
-  }
-  
+  font-size: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: hsl(302, 50%, 71%);
+  border: 2px solid hsl(302, 50%, 71%);
+  margin-bottom: 15px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.568);
+  size: 30px;
+}
+
+.card .addTaskButton {
+  font-size: 25px;
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 2px solid hsl(302, 50%, 71%);
+  background-color: rgba(255, 192, 203, 0);
+  cursor: pointer;
+  color: white;
+}
+
+.card .dateSelector {
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 2px solid hsl(302, 50%, 71%);
+  background-color: rgba(255, 192, 203, 0);
+  cursor: pointer;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 25px;
+}

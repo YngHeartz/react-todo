@@ -3,6 +3,7 @@ import './App.css';
 import Card from './Card';
 import TaskCard from './TaskCard';
 import './taskCard.css';
+import giphyGif from './giphy.gif';
 
 export default function App() {
   const [tasks, setTasks] = useState(() => {
@@ -10,29 +11,39 @@ export default function App() {
     return storedTasks ? JSON.parse(storedTasks) : [];
   });
   const [newTask, setNewTask] = useState('');
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-
+  // const [showGif, setShowGif] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
-  
 
   const handleAddTask = () => {
     if (newTask.trim() !== '') {
       const currentDate = new Date().toISOString().split('T')[0];
       setTasks([...tasks, { task: newTask, date: currentDate }]);
       setNewTask('');
+      // setShowGif(true);
     }
   };
 
-const handleDeleteTask = (taskToDelete) => {
-  const updatedTasks = tasks.filter((task) => task.task !== taskToDelete.task);
-  setTasks(updatedTasks);
-};
+  const handleDeleteTask = (taskToDelete) => {
+    const updatedTasks = tasks.filter((task) => task.task !== taskToDelete.task);
+    setTasks(updatedTasks);
+  };
+
+  // useEffect(() => {
+  //   if (showGif) {
+  //     const timer = setTimeout(() => {
+  //       setShowGif(false); // Hide the GIF after some time
+  //     }, 3000); // Assuming the GIF duration is 3 seconds
+
+  //     return () => clearTimeout(timer); // Cleanup
+  //   }
+  // }, [showGif]);
 
   return (
     <div>
+      {/* {showGif && <div><img src={giphyGif} alt="Giphy" className='gif' /></div>} */}
       <Card
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
