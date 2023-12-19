@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Card from './Card';
 import TaskCard from './TaskCard';
+import './taskCard.css';
 
-function App() {
+export default function App() {
   const [tasks, setTasks] = useState(() => {
     const storedTasks = localStorage.getItem('tasks');
     return storedTasks ? JSON.parse(storedTasks) : [];
@@ -12,25 +13,23 @@ function App() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
 
-  // Save tasks to local storage whenever tasks change
   useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-  }, []);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
+  
 
   const handleAddTask = () => {
     if (newTask.trim() !== '') {
-      setTasks([...tasks, newTask]);
+      const currentDate = new Date().toISOString().split('T')[0];
+      setTasks([...tasks, { task: newTask, date: currentDate }]);
       setNewTask('');
     }
   };
 
-  const handleDeleteTask = (taskToDelete) => {
-    const updatedTasks = tasks.filter((task) => task !== taskToDelete);
-    setTasks(updatedTasks);
-  };
+const handleDeleteTask = (taskToDelete) => {
+  const updatedTasks = tasks.filter((task) => task.task !== taskToDelete.task);
+  setTasks(updatedTasks);
+};
 
   return (
     <div>
@@ -41,12 +40,14 @@ function App() {
       />
       <h1 className='taskToCompleteheader'>Task's to complete</h1>
       <div className="tasks-container">
-        {tasks.map((task, index) => (
-          <TaskCard key={index} task={task} onDeleteTask={handleDeleteTask} />
+        {tasks.map((taskData, index) => (
+          <TaskCard 
+            key={index} 
+            taskData={taskData} 
+            onDeleteTask={handleDeleteTask} 
+          />
         ))}
       </div>
     </div>
   );
-}
-
-export default App;
+};
