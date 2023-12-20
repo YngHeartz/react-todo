@@ -13,9 +13,41 @@
     color: rgb(255, 238, 250); 
   }
   body {
+    background-color: #000000;
+    /* Set background image */
     background-image: url('./3d-rendering-abstract-black-white-waves.jpg');
+    /* Ensure the background image covers the entire viewport */
     background-size: cover;
+    /* Center the background image */
     background-position: center;
+    /* Optional: Add a background color in case the image doesn't load */
     background-color: #f2f2f2;
   }
-  
+  ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    
+}
+
+::-webkit-scrollbar-track {
+    background: #000000; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(266, 100%, 65%); /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(266, 75%, 58%); /* Color when hovered */
+}
+/* .gif {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 2px solid hsl(266, 100%, 65%);
+  box-shadow: 0 1px 5px hsl(266, 100%, 65%);
+} */
