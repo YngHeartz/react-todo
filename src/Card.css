@@ -13,7 +13,34 @@
   margin-top: 40px; /* Adjusted margin for visual balance */
   font-size: 50px; /* Increased font size for the card content */
 }
-
+.card .h2{
+  font-size: medium;
+  color: rgb(255, 238, 250);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card .importance{
+  font-size: 35px;
+  color: rgb(255, 238, 250);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* .card .importanceButtons{
+  font-size: 25px;
+  border-radius: 10px;
+  border: 2px solid hsl(302, 50%, 71%);
+  background-color: rgba(255, 192, 203, 0);
+  cursor: pointer;
+} */
+.card .asapButton , .soonButton,  .laterButton {
+  font-size: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+  border: 2px solid hsl(302, 50%, 71%);
+  background-color: rgba(255, 192, 203, 0);
+  cursor: pointer;
+  color: white;
+}
 /* Adjusted font size for child elements */
 .card .taskName {
   font-size: 40px;

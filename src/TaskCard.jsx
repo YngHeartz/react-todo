@@ -6,6 +6,7 @@ export default function TaskCard({ taskData, onDeleteTask }) {
       <div className="TaskCard">
             <h1>{task}</h1>
             <p>Date to Complete: {date}</p>
+            <p>Importance: {taskData.importance}</p>
             <button className="deleteTaskButton" type="button" onClick={() => onDeleteTask(taskData)}>Delete task</button>
       </div>
     </div>
