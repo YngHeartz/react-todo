@@ -1,0 +1,34 @@
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Reduced gap for visual balance */
+}
+
+.TaskCard {
+  border: 1.5px solid #ffffff; /* Reduced border width */
+  margin: 5px; /* Adjusted margin for visual balance */
+  border-radius: 4px; /* Reduced border-radius for visual balance */
+  box-shadow: 0 1px 5px hsl(266, 100%, 65%); /* Reduced box-shadow for visual balance */
+  max-width: 600px; /* Adjusted max-width */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px; /* Adjusted width */
+  height: 300px; /* Adjusted height */
+  padding-top: 20px; /* Adjusted padding for visual balance */
+  margin-top: 25px; /* Adjusted margin for visual balance */
+  color: rgb(255, 238, 250);    
+  font-size: 25px;
+}
+
+/* Adjusted styles for child elements */
+.TaskCard .deleteTaskButton {
+  margin-top: 10px; /* Adjusted margin for visual balance */
+  border-radius: 3px; /* Reduced border-radius for visual balance */
+  border: 1px solid hsla(0, 0%, 84%, 0.273); /* Adjusted border for visual balance */
+  background-color: rgba(0, 0, 0, 0.445);
+  cursor: pointer;
+  margin-bottom: 10px; /* Adjusted margin for visual balance */
+  color: rgb(244, 138, 210);
+  font-size: 25px;
+}
